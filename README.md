@@ -1,1 +1,1 @@
-# rxjs-smce-operators
+# rxjs-part1

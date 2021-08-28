@@ -1,0 +1,36 @@
+{
+    "name": "rxjs-smce-operators",
+    "version": "1.0.0",
+    "description": "switchMap mergeMap concatMap exhaustMap operators",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --mode development"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DeVLearninGRepo/rxjs-smce-operators.git"
+    },
+    "keywords": [
+        "switchMap",
+        "mergeMap",
+        "concatMap",
+        "exhaustMap",
+        "rxjs"
+    ],
+    "author": "Luca Evaroni DeVLearninG",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DeVLearninGRepo/rxjs-smce-operators/issues"
+    },
+    "homepage": "https://github.com/DeVLearninGRepo/rxjs-smce-operators#readme",
+    "dependencies": {
+        "rxjs": "^6.2.2",
+        "ts-loader": "^4.4.2",
+        "typescript": "^2.9.2",
+        "webpack": "^4.16.1",
+        "webpack-dev-server": "^3.1.4"
+    },
+    "devDependencies": {
+        "webpack-cli": "^3.1.0"
+    }
+}
