@@ -1,1 +1,1 @@
-# rxjs-part1
+# RxJs - switchMap, mergeMap, concatMap ed exhaustMap
