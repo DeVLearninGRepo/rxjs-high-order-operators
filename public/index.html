@@ -9,28 +9,38 @@
     <style>
         body {
             font-family: 'Arial';
-            background: lightgray
+            background: #1f1f1f;
+            color: #dcdcdc;
         }
-        
+
         ul {
             list-style-type: none;
             padding: 20px;
         }
-        
+
         li {
             padding: 15px;
             background: lightcoral;
             margin-bottom: 10px;
         }
+
+        h1.title {
+            display: flex;
+            align-items: center;
+        }
+
+        h1.title img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>RxJS Demo</h1>
-    <div>
-        <ul id="list"></ul>
-    </div>
-    <input id="search" type="text">
+    <h1 class="title"><img src="https://yt3.ggpht.com/ytc/AKedOLScImBJ3XCuK64CtN3mGHR8X94LUXobkOY7OeQs=s88-c-k-c0x00ffffff-no-rj">DeVLearninG
+    </h1>
+    <h2>RxJs Higher-Order Observable</h2>
+    <!-- <input id="search" type="text"> -->
     <script src="/bundle.js"></script>
 </body>
 

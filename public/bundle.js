@@ -2547,122 +2547,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/internal/operators/exhaustMap.js");
 
 
-let style = 'background: #214361; color: #fabd05; font-weight: bold; font-size: 16px; padding: 5px 15px 5px 5px;';
-//esempio 1
-//let interval$ = interval(1000).pipe(take(10));
-//interval$
-//     .pipe(
-//         map(x => x * 50)
-//     ).subscribe(x => {
-//         console.debug(x);
-//     });
-//esempio 2
-// let interval$ = interval(1000).pipe(take(10));
-// interval$
-//     .pipe(
-//         tap(x => console.debug('tick', x)),
-//         map(x => innerObservable()),
-//         //mergeMap(x => innerObservable$.pipe(map(y => x))),
-//         take(1)
-//     ).subscribe(x => {
-//         console.debug('subscribed tick', x);
-//     });
-// function innerObservable(tickIndex: number) {
-//     return new Observable<number>(x => {
-//          x.next(tickIndex);
-//          x.complete();
-//     });
-// }
-//concatMap
-//console.debug('%c ConcatMap', style);
-// let interval$ = interval(1).pipe(take(10));
-// interval$
-//     .pipe(
-//         tap(x => console.debug('tick', x)),
-//         concatMap(x => innerObservable(x)),
-//     ).subscribe(x => {
-//         console.debug('processed tick', x);
-//     }, (err)=>{
-//     }, ()=>{
-//         console.debug('completed');
-//     });
-// function innerObservable(tickIndex: number) {
-//     return new Observable<number>(x => {
-//         setTimeout(() => {
-//             x.next(tickIndex);
-//             x.complete();
-//         }, generateRandom(1, 2000));
-//     });
-// }
-//fine concatMap
-//mergeMap
-//console.debug('%c MergeMap', style);
-// let interval$ = interval(1).pipe(take(3));
-// interval$
-//     .pipe(
-//         tap(x => console.debug('tick', x)),
-//         mergeMap(x => innerObservable(x)),
-//     ).subscribe(x => {
-//         console.debug('processed tick', x);
-//     }, (err) => {
-//     }, () => {
-//         console.debug('completed');
-//     });
-// function innerObservable(tickIndex: number) {
-//     return new Observable<number>(x => {
-//         setTimeout(() => {
-//             x.next(tickIndex);
-//             x.complete();
-//         }, generateRandom(1, 2000));
-//     });
-// }
-//fine mergeMap
-//switchMap
-//console.debug('%c SwitchMap', style);
-// let interval$ = interval(500).pipe(take(10));
-// interval$
-//     .pipe(
-//         tap(x => console.debug('tick', x)),
-//         switchMap(x => innerObservable(x)),
-//     ).subscribe(x => {
-//         console.debug('processed tick', x);
-//     }, (err) => {
-//     }, () => {
-//         console.debug('completed');
-//     });
-// function innerObservable(tickIndex: number) {
-//     return new Observable<number>(x => {
-//         setTimeout(() => {
-//             x.next(tickIndex);
-//             x.complete();
-//         }, generateRandom(1, 1000));
-//     });
-// }
-// let searchField = document.getElementById('search');
-// let searchText$ = fromEvent<any>(searchField, 'keyup');
-// searchText$
-//     .pipe(
-//         map(x => x.target.value),
-//         tap(x => console.debug('keyup ', x)),
-//         switchMap(x => search(x))
-//     ).subscribe(x => {
-//         console.debug('search result', x);
-//     });
-// function search(searchTerm: string) {
-//     let checkNotification$ = new Observable<string>(x => {
-//         setTimeout(() => {
-//             x.next(searchTerm);
-//             x.complete();
-//         }, 1000);
-//     });
-//     return checkNotification$;
-// }
-//end switchMap
-//exhaustMap
-console.debug('%c ExhaustMap', style);
+let style = 'background: #1f1f1f; color: #dcdcdc; font-weight: bold; font-size: 16px; padding: 5px 15px 5px 5px;';
+console.debug("%c exhaustMap", style);
 let interval$ = (0,rxjs__WEBPACK_IMPORTED_MODULE_0__.interval)(1000).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_1__.take)(10));
-interval$
-    .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.tap)(x => console.debug('tick ', x)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.exhaustMap)(x => innerObservable(x)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_1__.take)(3)).subscribe(x => {
+interval$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.tap)(x => console.debug('tick', x)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.exhaustMap)(x => innerObservable(x))).subscribe(x => {
     console.debug('processed tick', x);
 }, (err) => {
 }, () => {
@@ -2673,7 +2561,7 @@ function innerObservable(tickIndex) {
         setTimeout(() => {
             x.next(tickIndex);
             x.complete();
-        }, 4000);
+        }, generateRandom(1, 2000));
     });
 }
 function generateRandom(min, max) {
